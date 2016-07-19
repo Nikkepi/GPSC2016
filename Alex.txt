@@ -1,1 +1,22 @@
-Hello world!
+//Hello world!
+//Pojat, here is a code which can be usiful to make gravity affecting EVERYTHING
+
+using UnityEngine;
+ using System.Collections;
+ 
+ public class MagnetScript : MonoBehaviour {
+ 
+     public GameObject attractedTo;
+     public float strengthOfAttraction = 5.0f;
+ 
+     
+     void Update()
+     {
+         Vector3 direction = attractedTo.transform.position - transform.position;
+         rigidbody2D.AddForce(strengthOfAttraction * direction);
+         
+     }
+ }
+ 
+ 
+ //http://answers.unity3d.com/questions/640504/creating-local-gravity-to-attract-specific-gameobj.html
