@@ -9,13 +9,27 @@ public class PlayerScript : MonoBehaviour
   
 
     public float RotateSpeed = 80f;
+    public float MovementSpeed = 20f;
+
+    public float boostCooldown = 1;
+
+    private Rigidbody2D rigidbody;
+
 
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
             transform.Rotate(-Vector3.forward * RotateSpeed * Time.deltaTime);
-        else if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
             transform.Rotate(Vector3.forward * RotateSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.UpArrow))
+
+            rigidbody = this.GetComponent.<Rigidbody2D>();
+
+            rigidbody.AddForce(transform.up * MovementSpeed);
+
+
+
     }
 
   
