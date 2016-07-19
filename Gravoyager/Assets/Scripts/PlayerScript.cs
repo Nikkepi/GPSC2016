@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
             transform.Rotate(-Vector3.forward * RotateSpeed * Time.deltaTime);
