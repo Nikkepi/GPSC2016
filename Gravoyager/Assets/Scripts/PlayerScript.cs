@@ -15,6 +15,12 @@ public class PlayerScript : MonoBehaviour
 
     private Rigidbody2D rigidbody;
 
+    void Start() {
+
+        rigidbody = GetComponent<Rigidbody2D>();
+
+    }
+
 
     void Update()
     {
@@ -24,7 +30,7 @@ public class PlayerScript : MonoBehaviour
             transform.Rotate(Vector3.forward * RotateSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.UpArrow))
 
-            rigidbody = this.GetComponent.<Rigidbody2D>();
+            
 
             rigidbody.AddForce(transform.up * MovementSpeed);
 
