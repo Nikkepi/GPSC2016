@@ -10,7 +10,6 @@ public class PlayerScript : MonoBehaviour
 
     public float RotateSpeed = 80f;
     public float MovementSpeed = 20f;
-    public float ReverseMovementSpeed = 10f;
 
     public float boostCooldown = 1;
 
@@ -25,22 +24,21 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (Input.GetKey(KeyCode.RightArrow))
             transform.Rotate(-Vector3.forward * RotateSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.LeftArrow))
             transform.Rotate(Vector3.forward * RotateSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.UpArrow))
 
+            
+
             rigidbody.AddForce(transform.up * MovementSpeed);
 
-        if (Input.GetKey(KeyCode.DownArrow))
 
-            rigidbody.AddForce(transform.up * (ReverseMovementSpeed * -1));
 
     }
 
-
+  
 
 }
 
