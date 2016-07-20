@@ -41,7 +41,14 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
 
-            rigidbody.AddForce((transform.up * -1) * ReverseMovementSpeed);
+            Torque();
+
+    }
+
+    void Torque() {
+
+        rigidbody.AddForce((transform.up * -1) * ReverseMovementSpeed);
+
 
     }
 
