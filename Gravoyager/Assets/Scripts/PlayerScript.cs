@@ -6,7 +6,9 @@ public class PlayerScript : MonoBehaviour
     /// <summary>
     /// 1 - The speed of the ship
     /// </summary>
-  
+
+
+
 
     public float RotateSpeed = 80f;
     public float MovementSpeed = 20f;
@@ -31,7 +33,12 @@ public class PlayerScript : MonoBehaviour
             transform.Rotate(Vector3.forward * RotateSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.UpArrow))
 
+            
             rigidbody.AddForce(transform.up * MovementSpeed);
+
+
+
+
         if (Input.GetKey(KeyCode.DownArrow))
 
             rigidbody.AddForce((transform.up * -1) * ReverseMovementSpeed);
